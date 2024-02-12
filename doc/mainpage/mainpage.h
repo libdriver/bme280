@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver BME280
- * @brief     libdriver bme280 is a full function driver of bme280 and it can run in both MCU and Linux platform.
+ * @brief     LibDriver BME280 is a full function driver of BME280 and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
