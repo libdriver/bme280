@@ -727,11 +727,23 @@ uint8_t bme280_deinit(bme280_handle_t *handle)
 
         return 4;                                                                   /* return error */
     }
-    if (handle->iic_deinit() != 0)                                                  /* iic deinit */
+    if (handle->iic_spi == BME280_INTERFACE_IIC)                                    /* iic interface */
     {
-        handle->debug_print("bme280: iic deinit failed.\n");                        /* iic deinit failed */
+        if (handle->iic_deinit() != 0)                                              /* iic deinit */
+        {
+            handle->debug_print("bme280: iic deinit failed.\n");                    /* iic deinit failed */
 
-        return 1;                                                                   /* return error */
+            return 1;                                                               /* return error */
+        }
+    }
+    else                                                                            /* spi interface */
+    {
+        if (handle->spi_deinit() != 0)                                              /* spi deinit */
+        {
+            handle->debug_print("bme280: spi deinit failed.\n");                    /* spi deinit failed */
+
+            return 1;                                                               /* return error */
+        }
     }
     handle->inited = 0;                                                             /* flag close */
 
