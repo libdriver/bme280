@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/bme280/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-BME280是一款濕度感測器，專為尺寸和低功耗是關鍵設計參數的移動應用和可穿戴設備開發。 該裝置結合了高線性和高精度感測器，在低電流消耗、長期穩定性和高EMC穩健性方面完全可行。 濕度感測器提供了極快的回應時間，囙此支持新興應用的效能要求，如上下文感知和在寬溫度範圍內的高精度。
+BME280是一款溫濕度感測器，專為尺寸受限和低功耗的移動應用、可穿戴設備開發。 該裝置結合了高線性和高精度感測器，在低電流消耗、長期穩定性和高EMC穩健性方面表現優秀。 濕度感測器提供了極快的回應時間，滿足高性能應用的要求。
 
 LibDriver BME280是LibDriver推出的BME280全功能驅動，該驅動提供壓強溫度濕度連續讀取、壓強溫度濕度單次讀取等功能並且它符合MISRA標準。
 
