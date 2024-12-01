@@ -210,88 +210,88 @@ typedef struct bme280_info_s
 
 /**
  * @brief     initialize bme280_handle_t structure
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] STRUCTURE is bme280_handle_t
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] STRUCTURE bme280_handle_t
  * @note      none
  */
 #define DRIVER_BME280_LINK_INIT(HANDLE, STRUCTURE)          memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link iic_init function
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] FUC points to an iic_init function address
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] FUC pointer to an iic_init function address
  * @note      none
  */
 #define DRIVER_BME280_LINK_IIC_INIT(HANDLE, FUC)           (HANDLE)->iic_init = FUC
 
 /**
  * @brief     link iic_deinit function
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] FUC points to an iic_deinit function address
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] FUC pointer to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_BME280_LINK_IIC_DEINIT(HANDLE, FUC)         (HANDLE)->iic_deinit = FUC
 
 /**
  * @brief     link iic_read function
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] FUC points to an iic_read function address
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] FUC pointer to an iic_read function address
  * @note      none
  */
 #define DRIVER_BME280_LINK_IIC_READ(HANDLE, FUC)           (HANDLE)->iic_read = FUC
 
 /**
  * @brief     link iic_write function
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] FUC points to an iic_write function address
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] FUC pointer to an iic_write function address
  * @note      none
  */
 #define DRIVER_BME280_LINK_IIC_WRITE(HANDLE, FUC)          (HANDLE)->iic_write = FUC
 
 /**
  * @brief     link spi_init function
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] FUC points to a spi_init function address
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] FUC pointer to a spi_init function address
  * @note      none
  */
 #define DRIVER_BME280_LINK_SPI_INIT(HANDLE, FUC)           (HANDLE)->spi_init = FUC
 
 /**
  * @brief     link spi_deinit function
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] FUC points to a spi_deinit function address
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] FUC pointer to a spi_deinit function address
  * @note      none
  */
 #define DRIVER_BME280_LINK_SPI_DEINIT(HANDLE, FUC)         (HANDLE)->spi_deinit = FUC
 
 /**
  * @brief     link spi_read function
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] FUC points to a spi_read function address
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] FUC pointer to a spi_read function address
  * @note      none
  */
 #define DRIVER_BME280_LINK_SPI_READ(HANDLE, FUC)           (HANDLE)->spi_read = FUC
 
 /**
  * @brief     link spi_write function
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] FUC points to a spi_write function address
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] FUC pointer to a spi_write function address
  * @note      none
  */
 #define DRIVER_BME280_LINK_SPI_WRITE(HANDLE, FUC)          (HANDLE)->spi_write = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_BME280_LINK_DELAY_MS(HANDLE, FUC)           (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to a bme280 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to a bme280 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_BME280_LINK_DEBUG_PRINT(HANDLE, FUC)        (HANDLE)->debug_print = FUC
@@ -309,7 +309,7 @@ typedef struct bme280_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to a bme280 info structure
+ * @param[out] *info pointer to a bme280 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -319,8 +319,8 @@ uint8_t bme280_info(bme280_info_t *info);
 
 /**
  * @brief     set the interface
- * @param[in] *handle points to a bme280 handle structure
- * @param[in] interface is the chip interface
+ * @param[in] *handle pointer to a bme280 handle structure
+ * @param[in] interface chip interface
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -330,8 +330,8 @@ uint8_t bme280_set_interface(bme280_handle_t *handle, bme280_interface_t interfa
 
 /**
  * @brief      get the interface
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *interface points to a chip interface buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *interface pointer to a chip interface buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -341,8 +341,8 @@ uint8_t bme280_get_interface(bme280_handle_t *handle, bme280_interface_t *interf
 
 /**
  * @brief     set the iic address pin
- * @param[in] *handle points to a bme280 handle structure
- * @param[in] addr_pin is the iic address pin
+ * @param[in] *handle pointer to a bme280 handle structure
+ * @param[in] addr_pin iic address pin
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -352,8 +352,8 @@ uint8_t bme280_set_addr_pin(bme280_handle_t *handle, bme280_address_t addr_pin);
 
 /**
  * @brief      get the iic address pin
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *addr_pin points to an iic address pin buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *addr_pin pointer to an iic address pin buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -363,7 +363,7 @@ uint8_t bme280_get_addr_pin(bme280_handle_t *handle, bme280_address_t *addr_pin)
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to a bme280 handle structure
+ * @param[in] *handle pointer to a bme280 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic or spi initialization failed
@@ -378,7 +378,7 @@ uint8_t bme280_init(bme280_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to a bme280 handle structure
+ * @param[in] *handle pointer to a bme280 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic deinit failed
@@ -391,13 +391,13 @@ uint8_t bme280_deinit(bme280_handle_t *handle);
 
 /**
  * @brief      read the temperature pressure and humidity data
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *temperature_raw points to a raw temperature buffer
- * @param[out] *temperature_c points to a converted temperature buffer
- * @param[out] *pressure_raw points to a raw pressure buffer
- * @param[out] *pressure_pa points to a converted pressure buffer
- * @param[out] *humidity_raw points to a raw humidity buffer
- * @param[out] *humidity_percentage points to a converted humidity percentage buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *temperature_raw pointer to a raw temperature buffer
+ * @param[out] *temperature_c pointer to a converted temperature buffer
+ * @param[out] *pressure_raw pointer to a raw pressure buffer
+ * @param[out] *pressure_pa pointer to a converted pressure buffer
+ * @param[out] *humidity_raw pointer to a raw humidity buffer
+ * @param[out] *humidity_percentage pointer to a converted humidity percentage buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -413,9 +413,9 @@ uint8_t bme280_read_temperature_pressure_humidity(bme280_handle_t *handle, uint3
 
 /**
  * @brief      read the pressure data
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *pressure_raw points to a raw pressure buffer
- * @param[out] *pressure_pa points to a converted pressure buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *pressure_raw pointer to a raw pressure buffer
+ * @param[out] *pressure_pa pointer to a converted pressure buffer
  * @return     status code
  *             - 0 success
  *             - 1 pressure read failed
@@ -429,9 +429,9 @@ uint8_t bme280_read_pressure(bme280_handle_t *handle, uint32_t *pressure_raw, fl
 
 /**
  * @brief      read the temperature data
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *temperature_raw points to a raw temperature buffer
- * @param[out] *temperature_c points to a converted temperature buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *temperature_raw pointer to a raw temperature buffer
+ * @param[out] *temperature_c pointer to a converted temperature buffer
  * @return     status code
  *             - 0 success
  *             - 1 temperature read failed
@@ -445,9 +445,9 @@ uint8_t bme280_read_temperature(bme280_handle_t *handle, uint32_t *temperature_r
 
 /**
  * @brief      read the humidity data
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *humidity_raw points to a raw humidity buffer
- * @param[out] *humidity_percentage points to a converted humidity percentage buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *humidity_raw pointer to a raw humidity buffer
+ * @param[out] *humidity_percentage pointer to a converted humidity percentage buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -461,7 +461,7 @@ uint8_t bme280_read_humidity(bme280_handle_t *handle, uint32_t *humidity_raw, fl
 
 /**
  * @brief     soft reset
- * @param[in] *handle points to a bme280 handle structure
+ * @param[in] *handle pointer to a bme280 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 soft reset failed
@@ -473,8 +473,8 @@ uint8_t bme280_soft_reset(bme280_handle_t *handle);
 
 /**
  * @brief      get status
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get status failed
@@ -486,8 +486,8 @@ uint8_t bme280_get_status(bme280_handle_t *handle, uint8_t *status);
 
 /**
  * @brief     set temperatue oversampling
- * @param[in] *handle points to a bme280 handle structure
- * @param[in] oversampling is the temperatue oversampling
+ * @param[in] *handle pointer to a bme280 handle structure
+ * @param[in] oversampling temperatue oversampling
  * @return    status code
  *            - 0 success
  *            - 1 set temperatue oversampling failed
@@ -499,8 +499,8 @@ uint8_t bme280_set_temperatue_oversampling(bme280_handle_t *handle, bme280_overs
 
 /**
  * @brief      get temperatue oversampling
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *oversampling points to a oversampling buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *oversampling pointer to a oversampling buffer
  * @return     status code
  *             - 0 success
  *             - 1 get temperatue oversampling failed
@@ -512,8 +512,8 @@ uint8_t bme280_get_temperatue_oversampling(bme280_handle_t *handle, bme280_overs
 
 /**
  * @brief     set pressure oversampling
- * @param[in] *handle points to a bme280 handle structure
- * @param[in] oversampling is the pressure oversampling
+ * @param[in] *handle pointer to a bme280 handle structure
+ * @param[in] oversampling pressure oversampling
  * @return    status code
  *            - 0 success
  *            - 1 set pressure oversampling failed
@@ -525,8 +525,8 @@ uint8_t bme280_set_pressure_oversampling(bme280_handle_t *handle, bme280_oversam
 
 /**
  * @brief      get pressure oversampling
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *oversampling points to a oversampling buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *oversampling pointer to a oversampling buffer
  * @return     status code
  *             - 0 success
  *             - 1 get pressure oversampling failed
@@ -538,8 +538,8 @@ uint8_t bme280_get_pressure_oversampling(bme280_handle_t *handle, bme280_oversam
 
 /**
  * @brief     set humidity oversampling
- * @param[in] *handle points to a bme280 handle structure
- * @param[in] oversampling is the humidity oversampling
+ * @param[in] *handle pointer to a bme280 handle structure
+ * @param[in] oversampling humidity oversampling
  * @return    status code
  *            - 0 success
  *            - 1 set humidity oversampling failed
@@ -551,8 +551,8 @@ uint8_t bme280_set_humidity_oversampling(bme280_handle_t *handle, bme280_oversam
 
 /**
  * @brief      get humidity oversampling
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *oversampling points to a humidity oversampling buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *oversampling pointer to a humidity oversampling buffer
  * @return     status code
  *             - 0 success
  *             - 1 get humidity oversampling failed
@@ -564,8 +564,8 @@ uint8_t bme280_get_humidity_oversampling(bme280_handle_t *handle, bme280_oversam
 
 /**
  * @brief     set mode
- * @param[in] *handle points to a bme280 handle structure
- * @param[in] mode is the set mode
+ * @param[in] *handle pointer to a bme280 handle structure
+ * @param[in] mode chip mode
  * @return    status code
  *            - 0 success
  *            - 1 set mode failed
@@ -577,8 +577,8 @@ uint8_t bme280_set_mode(bme280_handle_t *handle, bme280_mode_t mode);
 
 /**
  * @brief      get mode
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *mode points to a mode buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *mode pointer to a mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get mode failed
@@ -590,8 +590,8 @@ uint8_t bme280_get_mode(bme280_handle_t *handle, bme280_mode_t *mode);
 
 /**
  * @brief     set standby time
- * @param[in] *handle points to a bme280 handle structure
- * @param[in] standby_time is the set standby time
+ * @param[in] *handle pointer to a bme280 handle structure
+ * @param[in] standby_time standby time
  * @return    status code
  *            - 0 success
  *            - 1 set standby time failed
@@ -603,8 +603,8 @@ uint8_t bme280_set_standby_time(bme280_handle_t *handle, bme280_standby_time_t s
 
 /**
  * @brief      get standby time
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *standby_time points to a standby time buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *standby_time pointer to a standby time buffer
  * @return     status code
  *             - 0 success
  *             - 1 get standby time failed
@@ -616,8 +616,8 @@ uint8_t bme280_get_standby_time(bme280_handle_t *handle, bme280_standby_time_t *
 
 /**
  * @brief     set filter
- * @param[in] *handle points to a bme280 handle structure
- * @param[in] filter is the set filter
+ * @param[in] *handle pointer to a bme280 handle structure
+ * @param[in] filter input filter
  * @return    status code
  *            - 0 success
  *            - 1 set filter failed
@@ -629,8 +629,8 @@ uint8_t bme280_set_filter(bme280_handle_t *handle, bme280_filter_t filter);
 
 /**
  * @brief      get filter
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *filter points to a filter buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *filter pointer to a filter buffer
  * @return     status code
  *             - 0 success
  *             - 1 get filter failed
@@ -642,8 +642,8 @@ uint8_t bme280_get_filter(bme280_handle_t *handle, bme280_filter_t *filter);
 
 /**
  * @brief     set spi wire
- * @param[in] *handle points to a bme280 handle structure
- * @param[in] spi is the spi wire
+ * @param[in] *handle pointer to a bme280 handle structure
+ * @param[in] spi spi wire
  * @return    status code
  *            - 0 success
  *            - 1 set spi wire failed
@@ -655,8 +655,8 @@ uint8_t bme280_set_spi_wire(bme280_handle_t *handle, bme280_spi_wire_t spi);
 
 /**
  * @brief      get spi wire
- * @param[in]  *handle points to a bme280 handle structure
- * @param[out] *spi points to a spi wire buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[out] *spi pointer to a spi wire buffer
  * @return     status code
  *             - 0 success
  *             - 1 get spi wire failed
@@ -679,9 +679,9 @@ uint8_t bme280_get_spi_wire(bme280_handle_t *handle, bme280_spi_wire_t *spi);
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to a bme280 handle structure
- * @param[in] reg is the iic register address
- * @param[in] value is the data write to the register
+ * @param[in] *handle pointer to a bme280 handle structure
+ * @param[in] reg iic register address
+ * @param[in] value data written to the register
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -693,9 +693,9 @@ uint8_t bme280_set_reg(bme280_handle_t *handle, uint8_t reg, uint8_t value);
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to a bme280 handle structure
- * @param[in]  reg is the iic register address
- * @param[out] *value points to a read data buffer
+ * @param[in]  *handle pointer to a bme280 handle structure
+ * @param[in]  reg iic register address
+ * @param[out] *value pointer to a read data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
