@@ -60,8 +60,8 @@ extern "C"{
 
 /**
  * @brief     shot example init
- * @param[in] interface is the set interface
- * @param[in] addr_pin is the chip address pin
+ * @param[in] interface chip interface
+ * @param[in] addr_pin chip address pin
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -80,9 +80,9 @@ uint8_t bme280_shot_deinit(void);
 
 /**
  * @brief      shot example read
- * @param[out] *temperature points to a converted temperature buffer
- * @param[out] *pressure points to a converted pressure buffer
- * @param[out] *humidity_percentage points to a converted humidity percentage buffer
+ * @param[out] *temperature pointer to a converted temperature buffer
+ * @param[out] *pressure pointer to a converted pressure buffer
+ * @param[out] *humidity_percentage pointer to a converted humidity percentage buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed

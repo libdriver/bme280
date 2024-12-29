@@ -40,8 +40,8 @@ static bme280_handle_t gs_handle;        /**< bme280 handle */
 
 /**
  * @brief     register test
- * @param[in] interface is the set interface
- * @param[in] addr_pin is the chip address pin
+ * @param[in] interface chip interface
+ * @param[in] addr_pin chip address pin
  * @return    status code
  *            - 0 success
  *            - 1 test failed
