@@ -361,7 +361,6 @@ uint8_t bme280(uint8_t argc, char **argv)
     else if (strcmp("p", type) == 0)
     {
         /* print pin connection */
-        /* print pin connection */
         bme280_interface_debug_print("bme280: SPI interface SCK connected to GPIO11(BCM).\n");
         bme280_interface_debug_print("bme280: SPI interface MISO connected to GPIO9(BCM).\n");
         bme280_interface_debug_print("bme280: SPI interface MOSI connected to GPIO10(BCM).\n");

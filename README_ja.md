@@ -55,6 +55,8 @@ LibDriver BME280 は、LibDriver によって起動された BME280 のフル機
 #### example basic
 
 ```C
+#include "driver_bme280_basic.h"
+
 uint8_t res;
 uint32_t i;
 float temperature_c;
@@ -105,6 +107,8 @@ return 0;
 #### example shot
 
 ```c
+#include "driver_bme280_shot.h"
+
 uint8_t res;
 uint32_t i;
 float temperature_c;

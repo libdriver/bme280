@@ -55,6 +55,8 @@ Sie können auf die Beispiele im Verzeichnis /example zurückgreifen, um Ihren e
 #### example basic
 
 ```C
+#include "driver_bme280_basic.h"
+
 uint8_t res;
 uint32_t i;
 float temperature_c;
@@ -104,6 +106,8 @@ return 0;
 #### example shot
 
 ```C
+#include "driver_bme280_shot.h"
+
 uint8_t res;
 uint32_t i;
 float temperature_c;
