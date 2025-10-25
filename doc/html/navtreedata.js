@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "LibDriver BME280", "index.html", [
-    [ "Modules", "modules.html", "modules" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -51,8 +51,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__bme280__base__driver.html#ggacd4fc22ddf8e417ec10790bc9692ac41ad35a6e4810b47c0a9136d40d55a6104b"
+"structbme280__handle__s.html#adca3ee7a793bbf510d5267daf0fcf1c5"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';

@@ -55,6 +55,8 @@ LibDriver BME280是LibDriver推出的BME280全功能驱动，该驱动提供压�
 #### example basic
 
 ```C
+#include "driver_bme280_basic.h"
+
 uint8_t res;
 uint32_t i;
 float temperature_c;
@@ -105,6 +107,8 @@ return 0;
 #### example shot
 
 ```C
+#include "driver_bme280_shot.h"
+
 uint8_t res;
 uint32_t i;
 float temperature_c;

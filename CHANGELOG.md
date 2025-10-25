@@ -1,3 +1,9 @@
+## 1.0.8 (2025-10-26)
+
+## Features
+
+- update doxygen
+
 ## 1.0.7 (2025-04-17)
 
 ## Bug Fixes
@@ -38,7 +44,7 @@
 
 ## Bug Fixes
 
-- fix deinit bugs.
+- fix deinit bugs
 
 ## 1.0.0 (2024-01-15)
 

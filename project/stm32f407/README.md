@@ -72,7 +72,7 @@ We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g
    bme280 (-t read | --test=read) [--addr=<0 | 1>] [--interface=<iic | spi>] [--times=<num>]
    ```
 
-8. Run bme280 read function, num means the read times. 
+6. Run bme280 read function, num means the read times. 
 
    ```shell
    bme280 (-e read | --example=read) [--addr=<0 | 1>] [--interface=<iic | spi>] [--times=<num>]

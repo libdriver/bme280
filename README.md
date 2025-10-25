@@ -10,7 +10,7 @@
 
 The BME280 is a humidity sensor especially developed for mobile applications and wearables where size and low power consumption are key design parameters. The unit combines high linearity and high accuracy sensors and is perfectly feasible for low current consumption, long-term stability and high EMC robustness. The humidity sensor offers an extremely fast response time and therefore supports performance requirements for emerging applications such as context awareness, and high accuracy over a wide temperature range.
 
-LibDriver BME280 is a full-featured driver of BME280 launched by LibDriver.It provides continuous reading of pressure, temperature and humidity , single reading of pressure, temperature and humidity, etc. LibDriver is MISRA compliant.
+LibDriver BME280 is a full-featured driver for BME280, launched by LibDriver.It provides continuous reading, single reading and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
@@ -55,6 +55,8 @@ You can refer to the examples in the /example directory to complete your own dri
 #### example basic
 
 ```C
+#include "driver_bme280_basic.h"
+
 uint8_t res;
 uint32_t i;
 float temperature_c;
@@ -105,6 +107,8 @@ return 0;
 #### example shot
 
 ```C
+#include "driver_bme280_shot.h"
+
 uint8_t res;
 uint32_t i;
 float temperature_c;
