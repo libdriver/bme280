@@ -135,11 +135,11 @@ uint8_t bme280_read_test(bme280_interface_t interface, bme280_address_t addr_pin
         return 1;
     }
     
-    /* set temperatue oversampling x2 */
-    res = bme280_set_temperatue_oversampling(&gs_handle, BME280_OVERSAMPLING_x2);
+    /* set temperature oversampling x2 */
+    res = bme280_set_temperature_oversampling(&gs_handle, BME280_OVERSAMPLING_x2);
     if (res != 0)
     {
-        bme280_interface_debug_print("bme280: set temperatue oversampling failed.\n");
+        bme280_interface_debug_print("bme280: set temperature oversampling failed.\n");
         (void)bme280_deinit(&gs_handle); 
         
         return 1;

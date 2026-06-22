@@ -134,19 +134,19 @@ bme280: set addr pin low.
 bme280: check addr pin ok.
 bme280: set addr pin high.
 bme280: check addr pin ok.
-bme280: bme280_set_temperatue_oversampling/bme280_get_temperatue_oversampling test.
-bme280: set temperatue oversampling skip.
-bme280: check temperatue oversampling ok.
-bme280: set temperatue oversampling x1.
-bme280: check temperatue oversampling ok.
-bme280: set temperatue oversampling x2.
-bme280: check temperatue oversampling ok.
-bme280: set temperatue oversampling x4.
-bme280: check temperatue oversampling ok.
-bme280: set temperatue oversampling x8.
-bme280: check temperatue oversampling ok.
-bme280: set temperatue oversampling x16.
-bme280: check temperatue oversampling ok.
+bme280: bme280_set_temperature_oversampling/bme280_get_temperature_oversampling test.
+bme280: set temperature oversampling skip.
+bme280: check temperature oversampling ok.
+bme280: set temperature oversampling x1.
+bme280: check temperature oversampling ok.
+bme280: set temperature oversampling x2.
+bme280: check temperature oversampling ok.
+bme280: set temperature oversampling x4.
+bme280: check temperature oversampling ok.
+bme280: set temperature oversampling x8.
+bme280: check temperature oversampling ok.
+bme280: set temperature oversampling x16.
+bme280: check temperature oversampling ok.
 bme280: bme280_set_pressure_oversampling/bme280_get_pressure_oversampling test.
 bme280: set pressure oversampling skip.
 bme280: check pressure oversampling ok.
