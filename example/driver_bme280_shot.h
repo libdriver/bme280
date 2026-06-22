@@ -51,7 +51,7 @@ extern "C"{
 /**
  * @brief bme280 shot example default definition
  */
-#define BME280_SHOT_DEFAULT_TEMPERATURE_OVERSAMPLING        BME280_OVERSAMPLING_x2            /**< temperatue oversampling x2 */
+#define BME280_SHOT_DEFAULT_TEMPERATURE_OVERSAMPLING        BME280_OVERSAMPLING_x2            /**< temperature oversampling x2 */
 #define BME280_SHOT_DEFAULT_PRESSURE_OVERSAMPLING           BME280_OVERSAMPLING_x16           /**< pressure oversampling x16 */
 #define BME280_SHOT_DEFAULT_HUMIDITY_OVERSAMPLING           BME280_OVERSAMPLING_x1            /**< humidity oversampling x1 */
 #define BME280_SHOT_DEFAULT_STANDBY_TIME                    BME280_STANDBY_TIME_0P5_MS        /**< standby time 0.5ms */
