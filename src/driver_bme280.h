@@ -485,30 +485,30 @@ uint8_t bme280_soft_reset(bme280_handle_t *handle);
 uint8_t bme280_get_status(bme280_handle_t *handle, uint8_t *status);
 
 /**
- * @brief     set temperatue oversampling
+ * @brief     set temperature oversampling
  * @param[in] *handle pointer to a bme280 handle structure
- * @param[in] oversampling temperatue oversampling
+ * @param[in] oversampling temperature oversampling
  * @return    status code
  *            - 0 success
- *            - 1 set temperatue oversampling failed
+ *            - 1 set temperature oversampling failed
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
  * @note      none
  */
-uint8_t bme280_set_temperatue_oversampling(bme280_handle_t *handle, bme280_oversampling_t oversampling);
+uint8_t bme280_set_temperature_oversampling(bme280_handle_t *handle, bme280_oversampling_t oversampling);
 
 /**
- * @brief      get temperatue oversampling
+ * @brief      get temperature oversampling
  * @param[in]  *handle pointer to a bme280 handle structure
  * @param[out] *oversampling pointer to a oversampling buffer
  * @return     status code
  *             - 0 success
- *             - 1 get temperatue oversampling failed
+ *             - 1 get temperature oversampling failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
  * @note       none
  */
-uint8_t bme280_get_temperatue_oversampling(bme280_handle_t *handle, bme280_oversampling_t *oversampling);
+uint8_t bme280_get_temperature_oversampling(bme280_handle_t *handle, bme280_oversampling_t *oversampling);
 
 /**
  * @brief     set pressure oversampling
