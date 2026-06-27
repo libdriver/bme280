@@ -88,7 +88,7 @@ typedef enum
  */
 typedef enum
 {
-    BME280_OVERSAMPLING_SKIP = 0x00,        /**< oversampling x1 */
+    BME280_OVERSAMPLING_SKIP = 0x00,        /**< skip */
     BME280_OVERSAMPLING_x1   = 0x01,        /**< oversampling x1 */
     BME280_OVERSAMPLING_x2   = 0x02,        /**< oversampling x2 */
     BME280_OVERSAMPLING_x4   = 0x03,        /**< oversampling x4 */
@@ -403,7 +403,7 @@ uint8_t bme280_deinit(bme280_handle_t *handle);
  *             - 1 read failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
- *             - 4 compensate pressure failed
+ *             - 4 compensate failed
  *             - 5 read timeout
  * @note       none
  */
@@ -421,7 +421,7 @@ uint8_t bme280_read_temperature_pressure_humidity(bme280_handle_t *handle, uint3
  *             - 1 pressure read failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
- *             - 4 compensate pressure failed
+ *             - 4 compensate failed
  *             - 5 read timeout
  * @note       none
  */
@@ -437,7 +437,7 @@ uint8_t bme280_read_pressure(bme280_handle_t *handle, uint32_t *pressure_raw, fl
  *             - 1 temperature read failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
- *             - 4 compensate pressure failed
+ *             - 4 compensate failed
  *             - 5 read timeout
  * @note       none
  */
@@ -453,7 +453,7 @@ uint8_t bme280_read_temperature(bme280_handle_t *handle, uint32_t *temperature_r
  *             - 1 read failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
- *             - 4 compensate pressure failed
+ *             - 4 compensate failed
  *             - 5 read timeout
  * @note       none
  */
