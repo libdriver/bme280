@@ -658,14 +658,28 @@ uint8_t bme280_init(bme280_handle_t *handle)
     if (a_bme280_iic_spi_read(handle, BME280_REG_ID, (uint8_t *)&id, 1) != 0)        /* read chip id */
     {
         handle->debug_print("bme280: read id failed.\n");                            /* read id failed */
-        (void)handle->iic_deinit();                                                  /* iic deinit */
+        if (handle->iic_spi == BME280_INTERFACE_IIC)                                 /* iic interface */
+        {
+            (void)handle->iic_deinit();                                              /* iic deinit */
+        }
+        else
+        {
+            (void)handle->spi_deinit();                                              /* spi deinit */
+        }
 
         return 4;                                                                    /* return error */
     }
     if (id != 0x60)                                                                  /* check id */
     {
         handle->debug_print("bme280: id is error.\n");                               /* id is error */
-        (void)handle->iic_deinit();                                                  /* iic deinit */
+        if (handle->iic_spi == BME280_INTERFACE_IIC)                                 /* iic interface */
+        {
+            (void)handle->iic_deinit();                                              /* iic deinit */
+        }
+        else
+        {
+            (void)handle->spi_deinit();                                              /* spi deinit */
+        }
 
         return 4;                                                                    /* return error */
     }
@@ -673,14 +687,28 @@ uint8_t bme280_init(bme280_handle_t *handle)
     if (a_bme280_iic_spi_write(handle, BME280_REG_RESET, &reg, 1) != 0)              /* reset the chip */
     {
         handle->debug_print("bme280: reset failed.\n");                              /* reset failed */
-        (void)handle->iic_deinit();                                                  /* iic deinit */
+        if (handle->iic_spi == BME280_INTERFACE_IIC)                                 /* iic interface */
+        {
+            (void)handle->iic_deinit();                                              /* iic deinit */
+        }
+        else
+        {
+            (void)handle->spi_deinit();                                              /* spi deinit */
+        }
 
         return 5;                                                                    /* return error */
     }
     handle->delay_ms(5);                                                             /* delay 5ms */
     if (a_bme280_get_nvm_calibration(handle) != 0)                                   /* get nvm calibration */
     {
-        (void)handle->iic_deinit();                                                  /* iic deinit */
+        if (handle->iic_spi == BME280_INTERFACE_IIC)                                 /* iic interface */
+        {
+            (void)handle->iic_deinit();                                              /* iic deinit */
+        }
+        else
+        {
+            (void)handle->spi_deinit();                                              /* spi deinit */
+        }
 
         return 6;                                                                    /* return error */
     }
@@ -1380,7 +1408,7 @@ uint8_t bme280_get_spi_wire(bme280_handle_t *handle, bme280_spi_wire_t *spi)
  *             - 1 pressure read failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
- *             - 4 compensate pressure failed
+ *             - 4 compensate failed
  *             - 5 read timeout
  * @note       none
  */
@@ -1518,7 +1546,7 @@ uint8_t bme280_read_pressure(bme280_handle_t *handle, uint32_t *pressure_raw, fl
  *             - 1 temperature read failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
- *             - 4 compensate pressure failed
+ *             - 4 compensate failed
  *             - 5 read timeout
  * @note       none
  */
@@ -1634,7 +1662,7 @@ uint8_t bme280_read_temperature(bme280_handle_t *handle, uint32_t *temperature_r
  *             - 1 read failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
- *             - 4 compensate pressure failed
+ *             - 4 compensate failed
  *             - 5 read timeout
  * @note       none
  */
@@ -1772,7 +1800,7 @@ uint8_t bme280_read_humidity(bme280_handle_t *handle, uint32_t *humidity_raw, fl
  *             - 1 read failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
- *             - 4 compensate pressure failed
+ *             - 4 compensate failed
  *             - 5 read timeout
  * @note       none
  */
