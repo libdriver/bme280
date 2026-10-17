@@ -290,14 +290,14 @@ static uint8_t a_bme280_get_nvm_calibration(bme280_handle_t *handle)
 
         return 1;                                                                              /* return error */
     }
-    handle->h4 = (int16_t)((uint16_t)buf[0] << 4 | (buf[1] & 0xF));                            /* set h4 */
+    handle->h4 = (int16_t)((int16_t)(int8_t)buf[0] * 16 | (buf[1] & 0x0F));                    /* set h4 */
     if (a_bme280_iic_spi_read(handle, BME280_REG_NVM_PAR_H5_L, (uint8_t *)buf, 2) != 0)        /* read h5 */
     {
         handle->debug_print("bme280: get calibration data failed.\n");                         /* get calibration data failed */
 
         return 1;                                                                              /* return error */
     }
-    handle->h5 = (int16_t)((uint16_t)buf[1] << 4 | ((buf[0] >> 4) & 0xF));                     /* set h5 */
+    handle->h5 = (int16_t)((int16_t)(int8_t)buf[1] * 16 | (buf[0] >> 4));                      /* set h5 */
     if (a_bme280_iic_spi_read(handle, BME280_REG_NVM_PAR_H6, (uint8_t *)buf, 1) != 0)          /* read h6 */
     {
         handle->debug_print("bme280: get calibration data failed.\n");                         /* get calibration data failed */
