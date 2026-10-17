@@ -370,7 +370,7 @@ uint8_t bme280_get_addr_pin(bme280_handle_t *handle, bme280_address_t *addr_pin)
  *            - 2 handle is NULL
  *            - 3 linked functions is NULL
  *            - 4 id is error
- *            - 5 get nvm calibration failed
+ *            - 5 reset failed
  *            - 6 read calibration failed
  * @note      none
  */

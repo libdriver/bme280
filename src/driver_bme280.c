@@ -564,7 +564,7 @@ uint8_t bme280_get_interface(bme280_handle_t *handle, bme280_interface_t *interf
  *            - 2 handle is NULL
  *            - 3 linked functions is NULL
  *            - 4 id is error
- *            - 5 get nvm calibration failed
+ *            - 5 reset failed
  *            - 6 read calibration failed
  * @note      none
  */
